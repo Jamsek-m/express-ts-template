@@ -1,7 +1,4 @@
 import {NextFunction, Request, Response, Router} from "express";
-const podatki = {
-    sporocilo: "pozdravljen svet!",
-};
 
 export class IndexRouter {
 
@@ -17,7 +14,9 @@ export class IndexRouter {
     }
 
     public getAll(req: Request, res: Response, next: NextFunction) {
-        res.json(podatki);
+        res.json({
+            sporocilo: "pozdravljen svet!",
+        });
     }
 
 }

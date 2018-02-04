@@ -1,9 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const podatki = {
-    sporocilo: "pozdravljen svet!",
-};
 class IndexRouter {
     constructor() {
         this.router = express_1.Router();
@@ -13,7 +10,9 @@ class IndexRouter {
         this.router.get("/", this.getAll);
     }
     getAll(req, res, next) {
-        res.json(podatki);
+        res.json({
+            sporocilo: "pozdravljen svet!",
+        });
     }
 }
 exports.IndexRouter = IndexRouter;
